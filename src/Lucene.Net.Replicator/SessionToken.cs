@@ -1,4 +1,5 @@
 using J2N.IO;
+using Lucene.Net.Support;
 using System.Collections.Generic;
 using System;
 using System.IO;
@@ -149,7 +150,7 @@ namespace Lucene.Net.Replicator
 
         public override string ToString()
         {
-            return string.Format("id={0} version={1} files={2}", Id, Version, SourceFiles);
+            return string.Format("id={0} version={1} files={2}", Id, Version, Collections.ToString(SourceFiles));
         }
     }
 }
